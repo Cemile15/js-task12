@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let addButton = document.getElementById('btn');
     let tbody = document.getElementById('tbody');
 
-    addButton.addEventListener('click', function() {
+    addButton.addEventListener('click', function () {
         let title = document.getElementById('title').value;
         let author = document.getElementById('author').value;
         let color = document.getElementById('color').value;
@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${author}</td>
                 <td>${type.value}</td>
             `;
+            newRow.style.backgroundColor = color;
             tbody.appendChild(newRow);
+        }
+        else {
+            alert('Zəhmət olmasa bütün xanaları doldurun!')
         }
     });
 });
